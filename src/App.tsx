@@ -1,7 +1,7 @@
 import type {FC} from 'react'
-import {NavBar, TabBar} from 'antd-mobile'
+import {NavBar, SafeArea, TabBar} from 'antd-mobile'
 import {BrowserRouter, Route, Routes, useLocation, useNavigate} from 'react-router'
-import {RedoOutline, HistogramOutline, UnorderedListOutline, UserOutline,} from 'antd-mobile-icons'
+import {HistogramOutline, RedoOutline, UnorderedListOutline, UserOutline,} from 'antd-mobile-icons'
 import Home from './pages/Home'
 import './App.css'
 
@@ -18,7 +18,7 @@ const Bottom: FC = () => {
         {
             key: '/home',
             title: '首页',
-            icon: <RedoOutline />,
+            icon: <RedoOutline/>,
         },
         {
             key: '/todo',
@@ -28,7 +28,7 @@ const Bottom: FC = () => {
         {
             key: '/message',
             title: '消息',
-            icon: <HistogramOutline />,
+            icon: <HistogramOutline/>,
         },
         {
             key: '/me',
@@ -64,6 +64,7 @@ export default function App() {
                 <div className="bottom">
                     <Bottom/>
                 </div>
+                <SafeArea position='bottom'/>
             </div>
         </BrowserRouter>
     )
