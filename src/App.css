@@ -5,18 +5,25 @@
 }
 
 .top {
-    flex: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
     border-bottom: solid 1px var(--adm-color-border);
 }
 
 .body {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 46px;
+    padding-bottom: 68px;
 }
 
 .bottom {
-    flex: 0;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 20px;
     border-top: solid 1px var(--adm-color-border);
 }
