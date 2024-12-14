@@ -16,7 +16,7 @@ const Bottom: FC = () => {
 
     const tabs = [
         {
-            key: '/home',
+            key: '/',
             title: '首页',
             icon: <RedoOutline/>,
         },
@@ -38,7 +38,7 @@ const Bottom: FC = () => {
     ]
 
     return (
-        <TabBar activeKey={pathname} onChange={value => setRouteActive(value)}>
+        <TabBar safeArea activeKey={pathname} onChange={value => setRouteActive(value)}>
             {tabs.map(item => (
                 <TabBar.Item key={item.key} icon={item.icon}/>
             ))}
@@ -48,14 +48,14 @@ const Bottom: FC = () => {
 
 export default function App() {
     return (
-        <BrowserRouter>
-            <div className="app">
+        <div className="app">
+            <BrowserRouter>
                 <div className="top">
                     <NavBar back={null}>Lite Node</NavBar>
                 </div>
                 <div className="body">
                     <Routes>
-                        <Route path="/home" element={<Home/>}/>
+                        <Route path="/" element={<Home/>}/>
                         <Route path="/todo" element={<Todo/>}/>
                         <Route path="/message" element={<Leaderboard/>}/>
                         <Route path="/me" element={<PersonalCenter/>}/>
@@ -64,9 +64,8 @@ export default function App() {
                 <div className="bottom">
                     <Bottom/>
                 </div>
-                <SafeArea position='bottom'/>
-            </div>
-        </BrowserRouter>
+            </BrowserRouter>
+        </div>
     )
 }
 
