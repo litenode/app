@@ -6,7 +6,7 @@ function App() {
         <>
             <nav>Lite node</nav>
             <Home></Home>
-            <footer>v1.0.0</footer>
+            <footer>v1.0.1</footer>
         </>
     )
 }
