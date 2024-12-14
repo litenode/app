@@ -1,5 +1,5 @@
 import type {FC} from 'react'
-import {NavBar, SafeArea, TabBar} from 'antd-mobile'
+import {NavBar, TabBar} from 'antd-mobile'
 import {BrowserRouter, Route, Routes, useLocation, useNavigate} from 'react-router'
 import {HistogramOutline, RedoOutline, UnorderedListOutline, UserOutline,} from 'antd-mobile-icons'
 import Home from './pages/Home'
