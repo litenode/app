@@ -1,4 +1,4 @@
-const VERSION = 1;
+const VERSION = 2;
 
 self.addEventListener('install', (event) => {
     console.debug('Inside the install handler:', VERSION);
